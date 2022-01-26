@@ -1,0 +1,126 @@
+<template>
+<div>
+
+    <v-dev-table
+        :source="dataSource"
+        :total="pageInfo.TotalCount"
+        :perpage="pageInfo.PageSize"
+        :actions="actions"
+        :columns="columns"
+        :limitDisabled="false"
+        :searchDisabled="false"
+        v-on:change="change"
+        v-on:searching="searching"
+    ></v-dev-table>
+</div>
+</template>
+
+
+<script>
+import axios from 'axios'
+export default {
+  name: "ExamplePage",
+  data() {
+    return {
+      information: [],
+            columns: [
+              {
+                name: "Resource Name",
+                key: "ResourceName",
+                order: true,
+              }, {
+                name: "Resource Value",
+                key: "ResourceValue",
+                order: true,
+              },
+              {
+                name: "Durumu",
+                key: "IsPublish",
+                order: true,
+                render: (value, row) => {
+                  return (
+                      <div class="d-flex flex-column">
+                        <small class="js-lists-values-status text-50 mb-4pt">
+                          {value ? i18n.t("Views.grid.column.publish") : i18n.t("Views.grid.column.no-publish")}
+                        </small>
+                        {
+                          value ?
+                              (<span class="indicator-line rounded bg-success"></span>) :
+                              (<span class="indicator-line rounded bg-danger"></span>)
+                        }
+                      </div>
+                  );
+                },
+              },
+            ],
+            actions: [
+              {
+                text: "Edit",
+                icon: "material-icons icon-16pt",
+                iconKey: "edit",
+                btnStyle: "",
+                vue: this,
+                service: api,
+                class: "btn-outline-secondary",
+                show(selectedRow) {
+                  return true;
+                },
+                event(e, selectedRow, vue, service) {
+                  if (selectedRow !== null) {
+                    eventBus.$emit("eventSetLocaleStringResourceId", selectedRow.row.Id);
+                  }
+                },
+              },
+              {
+                text: "Delete",
+                icon: "material-icons icon-16pt",
+                iconKey: "delete",
+                btnStyle: "",
+                vue: this,
+                service: api,
+                class: "btn-outline-secondary",
+                show(selectedRow) {
+                  return true;
+                },
+                event(e, selectedRow, vue, service) {
+                  if (selectedRow) {
+                    vue.onDelete(selectedRow.row)
+                  }
+                },
+              }
+            ],
+      limits: [3, 5, 10, 15, 20],
+      page: 1,
+      perpage: 10,
+      pagination: {},
+      search: "",
+      total: 0,
+    };
+  },
+  methods: {
+    getSource() {
+      axios
+        .get(
+          `https://reqres.in/api/users?per_page=${this.perpage}&page=${this.page}`
+        )
+        .then((response) => {
+          this.information = response.data.data;
+          this.total = response.data.total;
+        });
+    },
+    change(value) {
+      this.page = value.page;
+      this.perpage = value.perpage;
+      this.getSource();
+    },
+    searching(value) {
+      this.search = value;
+      this.getSource();
+    },
+  },
+  mounted() {
+    this.dataLoad();
+    this.getSource();
+  },
+};
+</script>
