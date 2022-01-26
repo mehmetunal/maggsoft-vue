@@ -1,19 +1,11 @@
 <template>
-  <!--*******************
-        Preloader start
-    ********************-->
+
   <div id="preloader">
     <div class="lds-ripple">
       <div></div>
       <div></div>
     </div>
   </div>
-  <!--*******************
-        Preloader end
-    ********************-->
-  <!--**********************************
-        Main wrapper start
-    ***********************************-->
   <div id="main-wrapper">
     <app-header></app-header>
     <app-sidebar></app-sidebar>
