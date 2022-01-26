@@ -10,10 +10,13 @@
                   <div class="auth-form">
                     <div class="text-center mb-3">
                       <a href="index.html"
-                        ><img
-                          src="../../../public/assets/images/logo-full.png"
+                        >
+                        <img
+                          src="@/assets/images/logo/large_light.svg"
                           alt=""
-                      /></a>
+                          width="430"
+                      />
+                      </a>
                     </div>
                     <h4 class="text-center mb-4">Sign in your account</h4>
                     <form action="index.html">

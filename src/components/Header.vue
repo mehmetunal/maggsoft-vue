@@ -4,7 +4,12 @@
     ***********************************-->
   <div class="nav-header">
     <a href="index.html" class="brand-logo">
-      <svg
+      <img
+        class="logo-abbr"
+        width="55"
+        src="@/assets/images/logo/logo_light.png"
+      />
+      <!-- <svg
         class="logo-abbr"
         width="55"
         height="55"
@@ -19,7 +24,7 @@
           fill="url(#paint0_linear)"
         ></path>
         <defs></defs>
-      </svg>
+      </svg> -->
       <div class="brand-title">
         <h2 class="">Fillow.</h2>
         <span class="brand-sub-title">Saas Admin Dashboard</span>
@@ -334,7 +339,11 @@
                 role="button"
                 data-bs-toggle="dropdown"
               >
-                <img src="../../public/assets/images/user.jpg" width="56" alt="" />
+                <img
+                  src="../../public/assets/images/user.jpg"
+                  width="56"
+                  alt=""
+                />
               </a>
               <div class="dropdown-menu dropdown-menu-end">
                 <a href="app-profile.html" class="dropdown-item ai-icon">
