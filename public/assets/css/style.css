@@ -8694,7 +8694,7 @@ h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .
 
 .w-space-no {
   white-space: nowrap; }
-
+/* .content-body{min-height: calc(100vh - 50px);} */
 .content-body .container {
   margin-top: 2.5rem; }
 .content-body .container-fluid, .content-body .container-sm, .content-body .container-md, .content-body .container-lg, .content-body .container-xl, .content-body .container-xxl {

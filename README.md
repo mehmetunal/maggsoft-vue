@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+##ORNEK VUEJS ADMIN TEMPLATE (COOKIE)
+See [Configuration Reference](https://github.com/sundardsTechMind/Vue-Admin-Template-2)

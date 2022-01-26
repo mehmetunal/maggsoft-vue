@@ -29,7 +29,9 @@ module.exports = {
     "no-unused-components": "off",
     "no-mixed-spaces-and-tabs": 0,
     "vue/no-multiple-template-root": 0,
-    "no-useless-escape": 1
+    "no-useless-escape": 1,
+    "strict": "off",
+    'vue/no-unused-components': 'off',
   },
   globals: {
     var1: "readonly",

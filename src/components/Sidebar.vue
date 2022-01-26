@@ -11,7 +11,8 @@
             <span class="nav-text">Dashboard</span>
           </a>
           <ul aria-expanded="false">
-            <li><a href="index.html">Dashboard Light</a></li>
+            <li>
+              <router-link to="/home" tag="a" class="link">Anasayfa</router-link></li>
             <li><a href="index-2.html">Dashboard Dark</a></li>
             <li><a href="project-page.html">Project</a></li>
             <li><a href="contacts.html">Contacts</a></li>
