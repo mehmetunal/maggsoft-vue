@@ -12,7 +12,7 @@ const routes = [
       },
     ],
     meta: {
-      aut: true,
+      aut: false,
     },
   },
   {

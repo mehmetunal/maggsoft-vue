@@ -1,33 +1,29 @@
-import Vue from "vue";
+const app = Vue.createApp({});
 
 import DevText from "./DevText.vue";
 
-Vue.component("v-dev-text", DevText);
+app.component("v-dev-text", DevText);
 
 import DevNumber from "./DevNumber.vue";
 
-Vue.component("v-dev-number", DevNumber);
+app.component("v-dev-number", DevNumber);
 
 import DevTextarea from "./DevTextarea.vue";
 
-Vue.component("v-dev-textarea", DevTextarea);
+app.component("v-dev-textarea", DevTextarea);
 
 import DevImageUpload from "./DevImageUpload.vue";
 
-Vue.component("v-dev-image-upload", DevImageUpload);
+app.component("v-dev-image-upload", DevImageUpload);
 
 import DevVideoUpload from "./DevVideoUpload.vue";
 
-Vue.component("v-dev-video-upload", DevVideoUpload);
-
-import DevBreadcrumb from "./DevBreadcrumb";
-
-Vue.component("v-dev-breadcrumb", DevBreadcrumb);
+app.component("v-dev-video-upload", DevVideoUpload);
 
 import DevFileUpload from "./DevFileUpload.vue";
 
-Vue.component("v-dev-file-upload", DevFileUpload);
+app.component("v-dev-file-upload", DevFileUpload);
 
 import DevTable from "./tables/DevTable.vue";
 
-Vue.component("v-dev-table", DevTable);
+app.component("v-dev-table", DevTable);
