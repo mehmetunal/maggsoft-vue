@@ -1,4 +1,4 @@
-# devfreco-vue
+# maggsoft-vue
 
 ## Project setup
 ```
